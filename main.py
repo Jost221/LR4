@@ -1,11 +1,23 @@
-dev input_patch():#Хренычев Максим
+import os
+
+def input_patch():#Хренычев Максим
   pass#need to take patch from user, check directory for exist and return patch
 
-dev scan_file():#Скитихин Георгий
-  pass#need to scan patch on files with processing all exist and return dictionary
+def create_dictionary(path, level = 1, dictionary = {}):#Скитихин Георгий
+  for i in os.listdir(path):
+    print(os.path.join(path, i))
+    try:
+      if os.path.isdir(os.path.join(path, i)):
+        create_dictionary(os.path.join(path, i), level + 1 ,dictionary)
+      else:
+        dictionary[os.path.join(path, i)] = os.stat(os.path.join(path, i)).st_size
+    except Exception as error:
+      print(error)
+  return dictionary
 
-dev sort():#Шешин Александр
+def sort():#Шешин Александр
   pass#sort all dictionary and return dirctionary with file dublikate
 
-dev printed():#тимлид
+def printed():#тимлид
   pass
+
