@@ -3,6 +3,6 @@ dev input_patch():#Хренычев Максим
 dev scan_file():#Скитихин Георгий
   pass#need to scan patch on files with processing all exist and return dictionary
 dev sort():#Шешин Александр
-  pass#sort all dictionary and return list with file dublikate
+  pass#sort all dictionary and return dirctionary with file dublikate
 dev printed():#тимлид
   pass
